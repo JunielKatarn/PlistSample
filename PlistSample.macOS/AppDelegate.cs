@@ -20,13 +20,15 @@ namespace PlistSample.macOS
             window.TitleVisibility = NSWindowTitleVisibility.Hidden;
         }
 
-        public override NSWindow MainWindow => window;
+        public override NSWindow MainWindow
+        {
+            get { return window; }
+        }
 
         public override void DidFinishLaunching(NSNotification notification)
         {
             Forms.Init();
-            //LoadApplication(new Xamarin.Forms.app)
-            LoadApplication(new Application());
+            LoadApplication(new App());
             base.DidFinishLaunching(notification);
         }
 

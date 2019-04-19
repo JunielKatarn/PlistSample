@@ -15,6 +15,16 @@ namespace PlistSample
     [DesignTimeVisible(true)]
     public partial class MainPage : ContentPage
     {
+        string _plistString = @"
+        <plist version=""1.0"">
+            <dict>
+                <key>key1</key>
+                <string>value1</string>
+                <key>key2</key>
+                <string>value2</string>
+            </dict>
+        </plist>";
+
         public MainPage()
         {
             InitializeComponent();
@@ -22,7 +32,10 @@ namespace PlistSample
 
         void Handle_Clicked(object sender, System.EventArgs e)
         {
+            var bytes = Encoding.ASCII.GetBytes(_plistString);
+            var dict = PropertyListParser.Parse(bytes) as NSDictionary;
 
+            DisplayAlert("Parsed!", $"The dictionary has {dict.Keys.Count} keys.", "Cancel");
         }
     }
 }

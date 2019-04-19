@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
+using Claunia.PropertyList;
+
 namespace PlistSample
 {
     // Learn more about making custom code visible in the Xamarin.Forms previewer
@@ -16,6 +18,11 @@ namespace PlistSample
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        void Handle_Clicked(object sender, System.EventArgs e)
+        {
+
         }
     }
 }

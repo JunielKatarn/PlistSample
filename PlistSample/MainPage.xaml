@@ -2,11 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:PlistSample" x:Class="PlistSample.MainPage">
     <StackLayout>
         <!-- Place new controls here -->
-        <Label
+      <Label
             Text="Welcome to Xamarin.Forms!"
             HorizontalOptions="Center"
-            VerticalOptions="CenterAndExpand"
             TextColor="Lime"
         />
+        <Button Text="Load PLIST" TextColor="Black" BackgroundColor="DarkGray" Clicked="Handle_Clicked" />
     </StackLayout>
 </ContentPage>
